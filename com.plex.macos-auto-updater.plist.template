@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.plex.macos-auto-updater</string>
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Replace with path to python3 (e.g. /usr/bin/python3 or /opt/homebrew/bin/python3) -->
+        <string>/usr/bin/python3</string>
+        <!-- Replace with path to plex_updater.py -->
+        <string>/Users/YOUR_USERNAME/Source/plex-server-macos-auto-updater/plex_updater.py</string>
+        <string>update</string>
+    </array>
+    
+    <!-- Option A: Run periodically (every 6 hours = 21600 seconds) -->
+    <key>StartInterval</key>
+    <integer>21600</integer>
+
+    <!-- Option B: Run daily at 04:00 AM (Uncomment below and remove StartInterval)
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>4</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    -->
+
+    <!-- Run when loaded / user logs in -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Process management -->
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <!-- Standard log paths -->
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_USERNAME/Library/Logs/PlexAutoUpdater.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_USERNAME/Library/Logs/PlexAutoUpdater.error.log</string>
+
+    <!-- Environment variables ensuring access to standard toolchains -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>

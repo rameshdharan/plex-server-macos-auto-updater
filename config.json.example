@@ -1,0 +1,15 @@
+{
+  "app_path": "/Applications/Plex Media Server.app",
+  "channel": "public",
+  "token": "",
+  "check_active_streams": true,
+  "keep_backup": true,
+  "notify": true,
+  "schedule": {
+    "type": "interval",
+    "interval_hours": 6,
+    "calendar_hour": 4,
+    "calendar_minute": 0
+  },
+  "log_file": "~/Library/Logs/PlexAutoUpdater.log"
+}

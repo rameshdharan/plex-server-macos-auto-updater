@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# User configurations & secrets
+config.json
+
+# Logs
+*.log
+*.error.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temp / extracted files
+*.bak
+*.tmp
